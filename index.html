@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Ball 8</title>
+    <style>
+        #circle{
+            position: absolute;
+            width: 650px;
+            height: 630px;
+            border: 5px solid black;
+            border-radius: 325px;
+            background-color: black;
+        }
+        .arrow-up{
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: 28.5%;
+            top: 17.5%;
+            border-left: 245px solid transparent;
+            border-right: 245px solid transparent;
+            border-bottom: 295px solid blue;
+            /*color: rgb(21, 21, 143);*/
+        }
+        .align{
+            position: absolute;
+            left: 23%;
+        }
+        #text{
+            border: 3px solid black;
+            font-size: 21px;
+        }
+        #button{
+            position: absolute;
+            top: 27%;
+            left: 7%;
+            width: 120px;
+            height: 60px;
+            font-size: 20px;
+            cursor:pointer;
+        }
+        #para{
+            position: absolute;
+            top: 40%;
+            left: 40.5%;
+            font-size: 25px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="align" id="circle">
+
+        </div>
+        <div  class ="arrow-up"></div>
+     <div>
+         <textarea name="" id="text" cols="26" placeholder="Ask question !!!" rows="6"></textarea>
+         <button type="button" id="button" onclick="myfunction()">ASK!!!</button>
+     </div>
+     <p id="para">Get predicted !!!!</p>
+    </div>
+</body>
+<script>
+    let question = document.getElementById("text");
+    let para = document.getElementById("para");
+    function myfunction(){
+        question.value = "";
+       let randomanswer =  Math.floor(Math.random()*10);
+       switch(randomanswer){
+           case 1:
+           para.innerHTML = "It's certain";
+           console.log(1);
+           break;
+           case 2:
+           console.log(2);
+           para.innerHTML = "Don't count on it";
+           break;
+           case 3:
+           para.innerHTML = "Most likely";
+           console.log(3);
+           break;
+           case 4:
+           para.innerHTML = "Ask again later";
+           console.log(4);
+           break;
+           case 5:
+           console.log(5);
+           para.innerHTML = "Cannot predict";
+           break;
+           case 6:
+           para.innerHTML = "My sources say no";
+           console.log(6);
+           break;
+           case 7:
+           para.innerHTML = "You may rely on it";
+           console.log(7);
+           break;
+           case 8:
+           para.innerHTML = "Outlook not so good";
+           console.log(8);
+           break;
+           case 9:
+           console.log(9);
+           para.innerHTML = "Better not tell you now!!!"
+           break;
+       }
+    }
+</script>
+</html>
